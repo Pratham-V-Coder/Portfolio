@@ -31,7 +31,7 @@ const Contact = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/v1/contact",
+        "http://https://portfolio-wyuo.onrender.com/api/v1/contact",
         formData,
       );
 
