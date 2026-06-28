@@ -24,34 +24,29 @@ const Contact = () => {
       [e.target.name]: e.target.value,
     });
   };
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
-
-    setLoading(true); // start loader
+    setLoading(true);
 
     try {
-      const res = await axios.post(
+      // MongoDB mein save karo
+      await axios.post(
         "https://portfolio-wyuo.onrender.com/api/v1/contact",
-        formData,
+        formData
       );
 
-      console.log(res.data);
-
-      toast.success("Message sent successfully!");
-
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      console.log(error);
-      toast.error("Something went wrong");
-    } finally {
-      setLoading(false); // stop loader
-    }
-  };
+      // EmailJS se email bhejo
+      await emailjs.send(
+        "service_qs8wm0m",
+        "template_21d5r1x",
+        {
+          name: formData.name,
+          email: formData.email,
+          title: formData.subject,
+          message: formData.message,
+        },
+        "73MuuWavvmOw0APZM"
+      );
   return (
     <section className="min-h-screen text-white py-20 px-6">
       <div className="max-w-7xl mx-auto">
