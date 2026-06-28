@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://https://portfolio-wyuo.onrender.com/api/v1",
+  baseURL: "https://portfolio-wyuo.onrender.com/api/v1",
   withCredentials: true,
 });
 
