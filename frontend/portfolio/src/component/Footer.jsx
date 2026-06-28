@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,39 +25,42 @@ const Footer = () => {
 
             <ul className="space-y-2 text-slate-400">
               <li>
-                <a href="/" className="hover:text-purple-500 transition">
+                <Link to="/" className="hover:text-purple-500 transition">
                   Home
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="/about" className="hover:text-purple-500 transition">
+                <Link to="/about" className="hover:text-purple-500 transition">
                   About
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="/education"
+                <Link
+                  to="/education"
                   className="hover:text-purple-500 transition"
                 >
                   Education
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="/certificate"
+                <Link
+                  to="/certificates"
                   className="hover:text-purple-500 transition"
                 >
                   Certificates
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="/contact" className="hover:text-purple-500 transition">
+                <Link
+                  to="/contact"
+                  className="hover:text-purple-500 transition"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -83,10 +87,15 @@ const Footer = () => {
               >
                 <FaLinkedin />
               </a>
-              
             </div>
 
-            <p className="mt-5 text-slate-400">prathamverma8880@gmail.com</p>
+            {/* <p className="mt-5 text-slate-400">prathamverma8880@gmail.com</p> */}
+            <a
+              href="mailto:prathamverma8880@gmail.com"
+              className="mt-5 text-slate-400 hover:text-purple-500 transition block"
+            >
+              prathamverma8880@gmail.com
+            </a>
           </div>
         </div>
 
