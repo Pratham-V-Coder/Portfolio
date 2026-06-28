@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import axios from "axios";
+import emailjs from "@emailjs/browser";
 import {
   FaEnvelope,
   FaPhoneAlt,
@@ -18,24 +19,24 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
-const handleSubmit = async (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      // MongoDB mein save karo
       await axios.post(
         "https://portfolio-wyuo.onrender.com/api/v1/contact",
-        formData
+        formData,
       );
 
-      // EmailJS se email bhejo
       await emailjs.send(
         "service_qs8wm0m",
         "template_21d5r1x",
@@ -45,8 +46,19 @@ const handleSubmit = async (e) => {
           title: formData.subject,
           message: formData.message,
         },
-        "73MuuWavvmOw0APZM"
+        "73MuuWavvmOw0APZM",
       );
+
+      toast.success("Message sent successfully!");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="min-h-screen text-white py-20 px-6">
       <div className="max-w-7xl mx-auto">
@@ -57,36 +69,30 @@ const handleSubmit = async (e) => {
               CONTACT INFO
             </h3>
 
-            {/* Email */}
             <div className="flex gap-4 mb-8">
               <div className="w-14 h-14 bg-slate-900/60 backdrop-blur-sm border border-slate-800 rounded-xl flex items-center justify-center">
                 <FaEnvelope />
               </div>
-
               <div>
                 <h4 className="text-gray-400 text-sm">MAIL US</h4>
                 <p className="text-white">prathamverma8880@gmail.com</p>
               </div>
             </div>
 
-            {/* Phone */}
             <div className="flex gap-4 mb-8">
               <div className="w-14 h-14 bg-slate-900/60 backdrop-blur-sm border border-slate-800 rounded-xl flex items-center justify-center">
                 <FaPhoneAlt />
               </div>
-
               <div>
                 <h4 className="text-gray-400 text-sm">CONTACT US</h4>
                 <p>+91 9636586801</p>
               </div>
             </div>
 
-            {/* Location */}
             <div className="flex gap-4 mb-12">
               <div className="w-14 h-14 bg-slate-900/60 backdrop-blur-sm border border-slate-800 rounded-xl flex items-center justify-center">
                 <FaMapMarkerAlt />
               </div>
-
               <div>
                 <h4 className="text-gray-400 text-sm">LOCATION</h4>
                 <p>Alwar, Rajasthan</p>
@@ -94,7 +100,6 @@ const handleSubmit = async (e) => {
               </div>
             </div>
 
-            {/* Social */}
             <h3 className="text-sm font-semibold tracking-widest text-gray-400 mb-6">
               SOCIAL INFO
             </h3>
@@ -108,7 +113,6 @@ const handleSubmit = async (e) => {
               >
                 <FaLinkedin />
               </a>
-
               <a
                 href="https://github.com/Pratham-V-Coder"
                 target="_blank"
@@ -135,7 +139,6 @@ const handleSubmit = async (e) => {
                 onChange={handleChange}
                 className="w-full bg-zinc-800/80 border border-zinc-700 rounded-xl px-5 py-4 outline-none focus:border-purple-500"
               />
-
               <input
                 type="email"
                 placeholder="Email *"
@@ -144,7 +147,6 @@ const handleSubmit = async (e) => {
                 onChange={handleChange}
                 className="w-full bg-zinc-800/80 border border-zinc-700 rounded-xl px-5 py-4 outline-none focus:border-purple-500"
               />
-
               <input
                 type="text"
                 placeholder="Your Subject *"
@@ -153,7 +155,6 @@ const handleSubmit = async (e) => {
                 onChange={handleChange}
                 className="w-full bg-zinc-800/80 border border-zinc-700 rounded-xl px-5 py-4 outline-none focus:border-purple-500"
               />
-
               <textarea
                 rows="3"
                 name="message"
