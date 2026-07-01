@@ -3,33 +3,33 @@ import React from "react";
 const educationData = [
   {
     degree: "Master of Computer Applications (MCA)",
-    institution: "Target University",
-    duration: "2025 - 2027",
-    score: "Pursuing / Planned",
+    institution: "JECRC University Jaipur",
+    duration: "2024 - 2026",
+    score: "Pursuing",
     description:
       "Advanced studies in Software Engineering, Data Analytics, Artificial Intelligence, Cloud Computing, Database Systems, and Full Stack Development.",
   },
   {
     degree: "Bachelor of Computer Applications (BCA)",
-    institution: "Poornima University, Jaipur",
-    duration: "2022 - 2025",
-    score: "CGPA: 8.5/10",
+    institution: "ICFAI University, Jaipur",
+    duration: "2021 - 2024",
+    score: "CGPA: 7.07/10",
     description:
       "Focused on Programming, Database Management, Data Structures, Web Development, Data Analytics, and Software Engineering.",
   },
   {
     degree: "Senior Secondary (12th)",
-    institution: "Your School Name",
-    duration: "2021 - 2022",
-    score: "Percentage: 85%",
+    institution: "Yeshwant Sr Sec School",
+    duration: "2020 - 2021",
+    score: "Percentage: 78%",
     description:
       "Completed higher secondary education with Mathematics and Computer Science.",
   },
   {
     degree: "Secondary School (10th)",
-    institution: "Your School Name",
+    institution: "Happy Sr Sec School",
     duration: "2019 - 2020",
-    score: "Percentage: 82%",
+    score: "Percentage: 51%",
     description:
       "Built a strong academic foundation in Science, Mathematics, and Computer Fundamentals.",
   },
@@ -103,7 +103,6 @@ const Education = () => {
               "Python",
               "SQL",
               "Web Development",
-              "Computer Networks",
               "Operating Systems",
               "Data Analytics",
               "Software Engineering",
