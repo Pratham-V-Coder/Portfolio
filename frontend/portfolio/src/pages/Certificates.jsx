@@ -6,6 +6,7 @@ import dsa from "../assets/DSA.jpg";
 import opps from "../assets/Opps.jpg";
 import codesoft from "../assets/Codsoft.jpg";
 import appco from "../assets/Appcosoftware.jpg";
+import intern from "../assets/InternshipCertificate_pag.jpg";
 
 const certificates = [
   {
@@ -56,6 +57,13 @@ const certificates = [
     date: "2023",
     image: appco,
     link: appco,
+  },
+  {
+    title: "Internship Certificate",
+    issuer: "KVON Tech Pvt. Ltd. Jaipur",
+    date: "2026",
+    image: intern,
+    link: intern,
   },
 ];
 

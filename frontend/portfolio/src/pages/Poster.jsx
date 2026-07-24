@@ -59,7 +59,7 @@ export default function Poster() {
       <div className="max-w-6xl mx-auto w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 py-16">
         {/* Left Section */}
         <div className="flex-1 text-center md:text-left space-y-5">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">
             Hi, Myself <span className="text-purple-500">Pratham Verma</span>
           </h1>
 

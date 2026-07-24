@@ -19,52 +19,42 @@ const skills = [
   {
     name: "HTML",
     image: html,
-    level: "95%",
   },
   {
     name: "CSS",
     image: css,
-    level: "90%",
   },
   {
     name: "JavaScript",
     image: js,
-    level: "85%",
   },
   {
     name: "React",
     image: react,
-    level: "85%",
   },
   {
     name: "Node.js",
     image: node,
-    level: "85%",
   },
   {
     name: "Express.js",
     image: express,
-    level: "85%",
   },
   {
     name: "MongoDB",
     image: mongo,
-    level: "85%",
   },
   {
     name: "MySQL",
     image: mysql,
-    level: "85%",
   },
   {
     name: "C++",
     image: cplus,
-    level: "80%",
   },
   {
     name: "Python",
     image: python,
-    level: "90%",
   },
 ];
 
@@ -116,15 +106,6 @@ const Skills = () => {
                   />
 
                   <h3 className="mt-5 text-xl font-semibold">{skill.name}</h3>
-
-                  <div className="mt-5 bg-slate-700 rounded-full h-2">
-                    <div
-                      className="bg-cyan-400 h-2 rounded-full"
-                      style={{ width: skill.level }}
-                    />
-                  </div>
-
-                  <p className="text-cyan-400 mt-2">{skill.level}</p>
                 </div>
               </SwiperSlide>
             ))}
