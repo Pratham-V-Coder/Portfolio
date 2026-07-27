@@ -3,7 +3,9 @@ import { FaGithub } from "react-icons/fa";
 import greencart from "../assets/greencartImg.png";
 import jobportal from "../assets/jobPortal.png";
 import dashboard from "../assets/dashboard.png";
-
+import zomato from "../assets/zomatoDataAnalysis.png";
+import netflix from "../assets/Netflix.png";
+9521278418;
 const projects = [
   {
     title: "GreenCart E-Commerce Website",
@@ -45,7 +47,7 @@ const projects = [
     title: "Zomato-Data-Analysis",
     description:
       "Developed a comprehensive business intelligence dashboard that transformed raw Zomato restaurant data into meaningful visual insights, enabling effective analysis of customer preferences, restaurant performance, pricing trends, and operational factors to support data-driven decision-making.",
-    image: dashboard,
+    image: zomato,
     tech: ["Excel", "Power BI"],
     github: "https://github.com/Pratham-V-Coder/Website_Performance_Analysis",
     // demo: "https://project-two-demo.com",
@@ -54,7 +56,7 @@ const projects = [
     title: "Netflix-Movie-Data-Analysis",
     description:
       "Designed a visually appealing and interactive Power BI dashboard that enables users to explore Netflix content trends, compare Movies and TV Shows, and analyze content distribution across genres, countries, ratings, and release years.",
-    image: dashboard,
+    image: netflix,
     tech: ["Excel", "Power BI"],
     github: "https://github.com/Pratham-V-Coder/Netflix-Movie-Data-Analysis",
     // demo: "https://project-two-demo.com",
