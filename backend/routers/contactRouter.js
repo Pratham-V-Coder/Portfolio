@@ -4,6 +4,8 @@ import Contact from "../models/contactModel.js";
 const router = express.Router();
 
 router.post("/", async (req, res) => {
+  console.log("📩 Contact request received:", req.body); // debug log
+
   try {
     const { name, email, subject, message } = req.body;
 
@@ -27,7 +29,7 @@ router.post("/", async (req, res) => {
       contact,
     });
   } catch (error) {
-    console.log(error);
+    console.log("❌ Error in contact route:", error); // thoda aur detail
     res.status(500).json({
       success: false,
       message: "Something went wrong.",
