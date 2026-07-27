@@ -32,6 +32,33 @@ const projects = [
     github: "https://github.com/Pratham-V-Coder",
     // demo: "https://project-two-demo.com",
   },
+  {
+    title: "Website Performance Analysis",
+    description:
+      "This project focuses on identifying trends in customer demographics, product categories, payment methods, seasonal sales, and purchasing habits through interactive visualizations and KPI metrics. It demonstrates practical data analysis and dashboard design skills using real-world retail data.",
+    image: dashboard,
+    tech: ["Excel", "Power BI"],
+    github: "https://github.com/Pratham-V-Coder/Website_Performance_Analysis",
+    // demo: "https://project-two-demo.com",
+  },
+  {
+    title: "Zomato-Data-Analysis",
+    description:
+      "Developed a comprehensive business intelligence dashboard that transformed raw Zomato restaurant data into meaningful visual insights, enabling effective analysis of customer preferences, restaurant performance, pricing trends, and operational factors to support data-driven decision-making.",
+    image: dashboard,
+    tech: ["Excel", "Power BI"],
+    github: "https://github.com/Pratham-V-Coder/Website_Performance_Analysis",
+    // demo: "https://project-two-demo.com",
+  },
+  {
+    title: "Netflix-Movie-Data-Analysis",
+    description:
+      "Designed a visually appealing and interactive Power BI dashboard that enables users to explore Netflix content trends, compare Movies and TV Shows, and analyze content distribution across genres, countries, ratings, and release years.",
+    image: dashboard,
+    tech: ["Excel", "Power BI"],
+    github: "https://github.com/Pratham-V-Coder/Netflix-Movie-Data-Analysis",
+    // demo: "https://project-two-demo.com",
+  },
   // add more projects here
 ];
 
