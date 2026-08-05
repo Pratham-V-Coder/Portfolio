@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+.swiper {
+  overflow: visible !important;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
