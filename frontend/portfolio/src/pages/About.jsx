@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { motion } from "framer-motion";
 import profileImg from "../assets/my.jpeg";
 import resume from "../assets/Pratham.pdf";
@@ -45,6 +46,13 @@ const badgeVariants = {
   },
 };
 
+=======
+import profileImg from "../assets/my.jpeg";
+import resume from "../assets/Pratham.pdf";
+import Projects from "./Projects";
+import { Link } from "react-router-dom";
+
+>>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
 const About = () => {
   const skills = [
     "Python",
@@ -65,6 +73,7 @@ const About = () => {
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24">
         <div className="grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
+<<<<<<< HEAD
           <motion.div
             className="order-2 xl:order-1"
             variants={leftVariants}
@@ -90,12 +99,25 @@ const About = () => {
               variants={itemVariants}
               className="mt-6 max-w-2xl text-base sm:text-lg leading-9 text-slate-400"
             >
+=======
+          <div className="order-2 xl:order-1">
+            <span className="inline-flex items-center px-5 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 font-medium">
+              Data Analyst & MERN Developer
+            </span>
+
+            <h1 className="mt-6 text-3xl sm:text-4xl lg:text-3xl xl:text-4xl font-extrabold leading-tight">
+              Hi, I'm <span className="text-purple-500">Pratham Verma</span>
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-base sm:text-lg leading-9 text-slate-400">
+>>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
               Passionate Data Analyst and Full Stack Developer skilled in
               Python, SQL, Power BI, Excel, React.js, Node.js, Express.js and
               MongoDB.
               <br />I enjoy transforming raw data into meaningful insights,
               creating interactive dashboards, and building scalable web
               applications that solve real-world problems.
+<<<<<<< HEAD
             </motion.p>
 
             <motion.div
@@ -146,6 +168,39 @@ const About = () => {
               variants={itemVariants}
               className="grid grid-cols-3 gap-8 mt-14 max-w-xl"
             >
+=======
+            </p>
+
+            <div className="flex flex-wrap gap-3 mt-7">
+              {skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-5 py-2 rounded-full bg-slate-800/80 border border-slate-700 text-slate-200 hover:border-purple-400 hover:bg-purple-500/30 hover:text-white hover:shadow-lg hover:shadow-purple-500/30 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-7 flex flex-col sm:flex-row gap-4">
+              <Link
+                to="/projects"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-purple-600 hover:bg-purple-700 transition-all duration-300 font-semibold shadow-lg shadow-purple-600/30"
+              >
+                View Projects
+              </Link>
+
+              <a
+                href={resume}
+                download="Pratham_Verma_Resume.pdf"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl border border-slate-700 hover:bg-slate-800 transition-all duration-300 font-semibold text-center inline-flex items-center justify-center"
+              >
+                Download Resume
+              </a>
+            </div>
+
+            <div className="grid grid-cols-3 gap-8 mt-14 max-w-xl">
+>>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
               <div>
                 <h3 className="text-3xl font-bold text-purple-500">15+</h3>
                 <p className="text-slate-400 mt-2">Projects</p>
@@ -158,6 +213,7 @@ const About = () => {
                 <h3 className="text-3xl font-bold text-green-400">10+</h3>
                 <p className="text-slate-400 mt-2">Certificates</p>
               </div>
+<<<<<<< HEAD
             </motion.div>
           </motion.div>
 
@@ -168,6 +224,12 @@ const About = () => {
             whileInView="visible"
             viewport={{ amount: 0.3, once: true }}
           >
+=======
+            </div>
+          </div>
+
+          <div className="order-1 xl:order-2 flex justify-center">
+>>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
             <div className="relative pt-6 pb-6 px-6 sm:px-10">
               <div className="absolute inset-0 rounded-full bg-purple-500/20 blur-3xl"></div>
 
@@ -192,6 +254,7 @@ const About = () => {
                 "
               />
 
+<<<<<<< HEAD
               <motion.div
                 custom={{ x: -30, y: -20 }}
                 variants={badgeVariants}
@@ -232,6 +295,27 @@ const About = () => {
               </motion.div>
             </div>
           </motion.div>
+=======
+              <div className="hidden sm:block absolute z-20 left-0 sm:-left-4 md:-left-10 lg:-left-8 top-4 sm:top-8">
+                <div className="bg-slate-900/95 backdrop-blur-md px-4 py-2.5 rounded-xl border border-slate-700 shadow-xl whitespace-nowrap text-sm sm:text-base">
+                  📊 Power BI & SQL
+                </div>
+              </div>
+
+              <div className="hidden sm:block absolute z-20 right-0 sm:-right-2 md:-right-6 lg:-right-10 bottom-6 sm:bottom-10">
+                <div className="bg-slate-900/95 backdrop-blur-md px-4 py-2.5 rounded-xl border border-slate-700 shadow-xl whitespace-nowrap text-sm sm:text-base">
+                  💻 MERN Developer
+                </div>
+              </div>
+
+              <div className="hidden sm:block absolute z-20 right-0 sm:-right-0 md:-right-4 lg:-right-6 top-1/2 -translate-y-1/2">
+                <div className="bg-slate-900/95 backdrop-blur-md px-4 py-2.5 rounded-xl border border-slate-700 shadow-xl whitespace-nowrap text-sm sm:text-base">
+                  🐍 Python
+                </div>
+              </div>
+            </div>
+          </div>
+>>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
         </div>
       </div>
     </section>

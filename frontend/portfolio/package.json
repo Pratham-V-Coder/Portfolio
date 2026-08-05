@@ -13,7 +13,11 @@
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.3.1",
     "axios": "^1.18.1",
+<<<<<<< HEAD
     "framer-motion": "^12.43.0",
+=======
+    "framer-motion": "^12.42.2",
+>>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
     "lucide-react": "^1.21.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",

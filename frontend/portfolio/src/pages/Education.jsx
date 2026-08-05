@@ -1,5 +1,8 @@
 import React from "react";
+<<<<<<< HEAD
 import { motion } from "framer-motion"; // Import motion from framer-motion
+=======
+>>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
 
 const educationData = [
   {
@@ -36,6 +39,7 @@ const educationData = [
   },
 ];
 
+<<<<<<< HEAD
 // Define animation variants for staggered appearance and elements
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -162,10 +166,38 @@ const Education = () => {
 
           {educationData.map((edu, index) => (
             <motion.div
+=======
+const Education = () => {
+  return (
+    <section className="min-h-screen bg-slate-950 text-white py-20 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <span className="text-cyan-400 uppercase tracking-widest font-medium">
+            Academic Journey
+          </span>
+
+          <h2 className="text-4xl md:text-5xl font-bold mt-4">Education</h2>
+
+          <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+            My educational background has provided a strong foundation in
+            computer science, software development, and data analytics.
+          </p>
+        </div>
+
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical Line */}
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-slate-800 transform md:-translate-x-1/2"></div>
+
+          {educationData.map((edu, index) => (
+            <div
+>>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
               key={index}
               className={`relative mb-12 flex items-center ${
                 index % 2 === 0 ? "md:justify-start" : "md:justify-end"
               }`}
+<<<<<<< HEAD
               // Choose appropriate variant based on index for alternating entry
               variants={
                 index % 2 === 0
@@ -183,6 +215,15 @@ const Education = () => {
               {/* Card content */}
               <div
                 className={`ml-12 md:ml-0 md:w-[45%] bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg`}
+=======
+            >
+              {/* Dot */}
+              <div className="absolute left-4 md:left-1/2 w-5 h-5 bg-purple-500 rounded-full border-4 border-slate-950 transform -translate-x-1/2 z-10"></div>
+
+              {/* Card */}
+              <div
+                className={`ml-12 md:ml-0 md:w-[45%] bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-purple-500 transition-all duration-300 shadow-lg`}
+>>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
               >
                 <span className="text-cyan-400 text-sm font-medium">
                   {edu.duration}
@@ -198,12 +239,17 @@ const Education = () => {
                   {edu.description}
                 </p>
               </div>
+<<<<<<< HEAD
             </motion.div>
+=======
+            </div>
+>>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
           ))}
         </div>
 
         {/* Skills Learned */}
         <div className="mt-20">
+<<<<<<< HEAD
           <motion.h3
             className="text-3xl font-bold text-center mb-8"
             initial={{ opacity: 0, y: -20 }}
@@ -221,6 +267,13 @@ const Education = () => {
             whileInView="show"
             viewport={{ once: true, amount: 0.5 }}
           >
+=======
+          <h3 className="text-3xl font-bold text-center mb-8">
+            Relevant Coursework
+          </h3>
+
+          <div className="flex flex-wrap justify-center gap-4">
+>>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
             {[
               "Data Structures",
               "DBMS",
@@ -231,6 +284,7 @@ const Education = () => {
               "Data Analytics",
               "Software Engineering",
             ].map((course) => (
+<<<<<<< HEAD
               <motion.span
                 key={course}
                 className="px-5 py-3 bg-slate-900 border border-slate-700 rounded-full"
@@ -244,6 +298,19 @@ const Education = () => {
         </div>
       </div>
     </motion.section>
+=======
+              <span
+                key={course}
+                className="px-5 py-3 bg-slate-900 border border-slate-700 rounded-full hover:border-cyan-400 transition"
+              >
+                {course}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+>>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
   );
 };
 
