@@ -1,11 +1,11 @@
 import express from "express";
-<<<<<<< HEAD
+
 import { submitContact } from "../controller/contactController.js";
 
 const router = express.Router();
 
 router.post("/", submitContact);
-=======
+
 import Contact from "../models/contactModel.js";
 
 const router = express.Router();
@@ -43,6 +43,5 @@ router.post("/", async (req, res) => {
     });
   }
 });
->>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
 
 export default router;
