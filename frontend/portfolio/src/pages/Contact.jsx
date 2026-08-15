@@ -144,8 +144,8 @@ const Contact = () => {
       next.subject = "Please add a subject";
     }
 
-    if (!formData.message.trim() || formData.message.trim().length < 10) {
-      next.message = "Message should be at least 10 characters";
+    if (!formData.message.trim()) {
+      next.message = "Please enter your message";
     }
 
     setErrors(next);
