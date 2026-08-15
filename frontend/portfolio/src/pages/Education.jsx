@@ -1,8 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
-import { motion } from "framer-motion"; // Import motion from framer-motion
-=======
->>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
+import { motion } from "framer-motion";
 
 const educationData = [
   {
@@ -39,27 +36,43 @@ const educationData = [
   },
 ];
 
-<<<<<<< HEAD
-// Define animation variants for staggered appearance and elements
+/* =========================================
+   SECTION ANIMATION
+========================================= */
+
 const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+
   show: {
     opacity: 1,
     y: 0,
+
     transition: {
       duration: 0.8,
       ease: "easeOut",
-      when: "beforeChildren", // Animate children after parent
+      when: "beforeChildren",
       staggerChildren: 0.1,
     },
   },
 };
 
+/* =========================================
+   HEADING ANIMATION
+========================================= */
+
 const headingVariants = {
-  hidden: { opacity: 0, y: -20 },
+  hidden: {
+    opacity: 0,
+    y: -20,
+  },
+
   show: {
     opacity: 1,
     y: 0,
+
     transition: {
       duration: 0.6,
       ease: "easeOut",
@@ -70,41 +83,93 @@ const headingVariants = {
 };
 
 const headingItemVariants = {
-  hidden: { opacity: 0, y: -20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  hidden: {
+    opacity: 0,
+    y: -20,
+  },
+
+  show: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
 };
 
-const timelineItemVariants = {
-  hidden: { opacity: 0, x: -100 }, // Start off-screen to the left
+/* =========================================
+   TIMELINE ANIMATION
+========================================= */
+
+const timelineItemVariantsLeft = {
+  hidden: {
+    opacity: 0,
+    x: -100,
+  },
+
   show: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
+
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
   },
 };
 
 const timelineItemVariantsRight = {
-  hidden: { opacity: 0, x: 100 }, // Start off-screen to the right
+  hidden: {
+    opacity: 0,
+    x: 100,
+  },
+
   show: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
+
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
   },
 };
 
+/* =========================================
+   TIMELINE DOT ANIMATION
+========================================= */
+
 const dotVariants = {
-  hidden: { scale: 0, opacity: 0 },
+  hidden: {
+    scale: 0,
+    opacity: 0,
+  },
+
   show: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 0.5, ease: "backOut" },
+
+    transition: {
+      duration: 0.5,
+      ease: "backOut",
+    },
   },
 };
 
+/* =========================================
+   COURSEWORK ANIMATION
+========================================= */
+
 const skillsContainerVariants = {
-  hidden: { opacity: 0 },
+  hidden: {
+    opacity: 0,
+  },
+
   show: {
     opacity: 1,
+
     transition: {
       staggerChildren: 0.1,
       delayChildren: 0.2,
@@ -113,32 +178,58 @@ const skillsContainerVariants = {
 };
 
 const skillTagVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+  },
+
   show: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.4, ease: "easeOut" },
+
+    transition: {
+      duration: 0.4,
+      ease: "easeOut",
+    },
   },
 };
 
+/* =========================================
+   EDUCATION COMPONENT
+========================================= */
+
 const Education = () => {
+  const coursework = [
+    "Data Structures",
+    "DBMS",
+    "Python",
+    "SQL",
+    "Web Development",
+    "Operating Systems",
+    "Data Analytics",
+    "Software Engineering",
+  ];
+
   return (
     <motion.section
       className="min-h-screen bg-slate-950 text-white py-20 px-6"
       initial="hidden"
-      whileInView="show" // Trigger animations when the section enters the viewport
-      viewport={{ once: true, amount: 0.2 }} // Only animate once, when 20% of the section is visible
-      variants={sectionVariants} // Apply variants to the section itself
+      whileInView="show"
+      viewport={{
+        once: true,
+        amount: 0.2,
+      }}
+      variants={sectionVariants}
     >
       <div className="max-w-6xl mx-auto">
-        {/* Heading */}
-        <motion.div
-          className="text-center mb-16"
-          variants={headingVariants} // Apply variants to the heading container
-        >
+        {/* =====================================
+            HEADING
+        ====================================== */}
+
+        <motion.div className="text-center mb-16" variants={headingVariants}>
           <motion.span
             className="text-cyan-400 uppercase tracking-widest font-medium"
-            variants={headingItemVariants} // Apply variants to individual heading elements
+            variants={headingItemVariants}
           >
             Academic Journey
           </motion.span>
@@ -159,137 +250,105 @@ const Education = () => {
           </motion.p>
         </motion.div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Vertical Line - no motion needed for this static element */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-slate-800 transform md:-translate-x-1/2"></div>
+        {/* =====================================
+            EDUCATION TIMELINE
+        ====================================== */}
 
+        <div className="relative">
+          {/* Vertical Timeline Line */}
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-slate-800 transform md:-translate-x-1/2" />
+
+          {/* Education Items */}
           {educationData.map((edu, index) => (
             <motion.div
-=======
-const Education = () => {
-  return (
-    <section className="min-h-screen bg-slate-950 text-white py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <span className="text-cyan-400 uppercase tracking-widest font-medium">
-            Academic Journey
-          </span>
-
-          <h2 className="text-4xl md:text-5xl font-bold mt-4">Education</h2>
-
-          <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
-            My educational background has provided a strong foundation in
-            computer science, software development, and data analytics.
-          </p>
-        </div>
-
-        {/* Timeline */}
-        <div className="relative">
-          {/* Vertical Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-slate-800 transform md:-translate-x-1/2"></div>
-
-          {educationData.map((edu, index) => (
-            <div
->>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
-              key={index}
+              key={`${edu.degree}-${index}`}
               className={`relative mb-12 flex items-center ${
                 index % 2 === 0 ? "md:justify-start" : "md:justify-end"
               }`}
-<<<<<<< HEAD
-              // Choose appropriate variant based on index for alternating entry
               variants={
                 index % 2 === 0
-                  ? timelineItemVariants
+                  ? timelineItemVariantsLeft
                   : timelineItemVariantsRight
               }
-              // Removed whileHover and its transition
             >
-              {/* Dot - can also be animated */}
+              {/* Timeline Dot */}
               <motion.div
                 className="absolute left-4 md:left-1/2 w-5 h-5 bg-purple-500 rounded-full border-4 border-slate-950 transform -translate-x-1/2 z-10"
-                variants={dotVariants} // Animate the dot's appearance
-              ></motion.div>
+                variants={dotVariants}
+              />
 
-              {/* Card content */}
-              <div
-                className={`ml-12 md:ml-0 md:w-[45%] bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg`}
-=======
-            >
-              {/* Dot */}
-              <div className="absolute left-4 md:left-1/2 w-5 h-5 bg-purple-500 rounded-full border-4 border-slate-950 transform -translate-x-1/2 z-10"></div>
-
-              {/* Card */}
-              <div
-                className={`ml-12 md:ml-0 md:w-[45%] bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-purple-500 transition-all duration-300 shadow-lg`}
->>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
-              >
+              {/* Education Card */}
+              <div className="ml-12 md:ml-0 md:w-[45%] bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg hover:border-purple-500 transition-all duration-300">
+                {/* Duration */}
                 <span className="text-cyan-400 text-sm font-medium">
                   {edu.duration}
                 </span>
 
+                {/* Degree */}
                 <h3 className="text-2xl font-bold mt-2">{edu.degree}</h3>
 
+                {/* Institution */}
                 <h4 className="text-purple-400 mt-2">{edu.institution}</h4>
 
+                {/* Score */}
                 <p className="text-green-400 mt-2 font-medium">{edu.score}</p>
 
+                {/* Description */}
                 <p className="text-slate-400 mt-4 leading-relaxed">
                   {edu.description}
                 </p>
               </div>
-<<<<<<< HEAD
             </motion.div>
-=======
-            </div>
->>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
           ))}
         </div>
 
-        {/* Skills Learned */}
+        {/* =====================================
+            RELEVANT COURSEWORK
+        ====================================== */}
+
         <div className="mt-20">
-<<<<<<< HEAD
+          {/* Coursework Heading */}
           <motion.h3
             className="text-3xl font-bold text-center mb-8"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            initial={{
+              opacity: 0,
+              y: -20,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.5,
+            }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+            }}
           >
             Relevant Coursework
           </motion.h3>
 
+          {/* Coursework Tags */}
           <motion.div
             className="flex flex-wrap justify-center gap-4"
-            variants={skillsContainerVariants} // Stagger skill tags
+            variants={skillsContainerVariants}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{
+              once: true,
+              amount: 0.5,
+            }}
           >
-=======
-          <h3 className="text-3xl font-bold text-center mb-8">
-            Relevant Coursework
-          </h3>
-
-          <div className="flex flex-wrap justify-center gap-4">
->>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
-            {[
-              "Data Structures",
-              "DBMS",
-              "Python",
-              "SQL",
-              "Web Development",
-              "Operating Systems",
-              "Data Analytics",
-              "Software Engineering",
-            ].map((course) => (
-<<<<<<< HEAD
+            {coursework.map((course) => (
               <motion.span
                 key={course}
-                className="px-5 py-3 bg-slate-900 border border-slate-700 rounded-full"
-                variants={skillTagVariants} // Individual skill tag animation
-                // Removed whileHover and its transition
+                className="px-5 py-3 bg-slate-900 border border-slate-700 rounded-full hover:border-cyan-400 hover:text-cyan-400 transition-colors duration-300"
+                variants={skillTagVariants}
+                whileHover={{
+                  scale: 1.05,
+                }}
               >
                 {course}
               </motion.span>
@@ -298,19 +357,6 @@ const Education = () => {
         </div>
       </div>
     </motion.section>
-=======
-              <span
-                key={course}
-                className="px-5 py-3 bg-slate-900 border border-slate-700 rounded-full hover:border-cyan-400 transition"
-              >
-                {course}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
->>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
   );
 };
 
