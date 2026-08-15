@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // import express from "express";
 // import cors from "cors";
 // import dotenv from "dotenv";
@@ -34,7 +32,7 @@
 // app.use(errorHandler);
 
 // export default app;
->>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
+
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -60,13 +58,7 @@ app.use(
   }),
 );
 
-<<<<<<< HEAD
-// Note: alag se app.options("*", cors()) yahaan nahi laga —
-// upar wala cors() middleware khud preflight OPTIONS handle kar leta hai,
-// aur "*" wildcard Express 5 mein crash kar sakta hai
-=======
 app.options("*", cors());
->>>>>>> 8ff2cbabb63e3dc363c67e93fb1bb524c7290ee0
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
